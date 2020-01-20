@@ -1,28 +1,31 @@
 #include<stdio.h>
 int main()
 {
-    int temperature, humidity;
+    int a,b,c;
 
-    printf("Hey John! \nWhat is today's temperature (in Celsius)? ");
-    scanf("%d", &temperature);
-    printf("And what about the humidity percentage? ");
-    scanf("%d", &humidity);
+    printf("Please enter a,b,c in the respective order :\n");
+    scanf("%d%d%d", &a, &b, &c);
 
-    if((temperature >= 20 && temperature <= 35) && (humidity >= 20 && humidity <= 75))
+    if( (a^2) == ((b^2) + (c^2)))
     {
-        printf("You should go for “breezy casuals”!\n");
+        printf("%d, %d, %d\n", a, b, c);
     }
 
-    else if(temperature < 20)
+    else if((b^2) == ((a^2) + (c^2)))
     {
-        printf("You should go for “woolly woolens”!\n");
+        printf("%d, %d, %d\n", b, a, c);
     }
 
-    else if(temperature > 35)
+    else if((c^2) == ((a^2) + (b^2)))
     {
-        printf("You should go for “summery stuff”!\n");
+        printf("%d, %d, %d\n", c, a, b);
     }
 
+    else
+    {
+        printf("FAIL!\n");
+    }
+    
     return(0);
 
 }
