@@ -7,7 +7,7 @@ int main()
 
     printf("Enter n : ");
     scanf("%d", &n);
-    printf("OUTPUT: Do you want the sum of first %d numbers or their product? ", n);
+    printf("Do you want the sum of first %d numbers or their product? ", n);
 
     scanf(" %s", &func);
 
