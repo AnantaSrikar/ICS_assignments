@@ -1,36 +1,13 @@
 #include<stdio.h>
-#include<string.h>
+#include<math.h>
 int main()
 {
-    int n, fn = 0;
-    char func[7];
+    int n;
+    float sqart;
 
-    printf("Enter n : ");
+    printf("Enter a no : ");
     scanf("%d", &n);
-    printf("Do you want the sum of first %d numbers or their product? ", n);
-
-    scanf(" %s", &func);
-
-    if(strcmp("SUM", func) == 0)
-    {
-        for (int i = 1; i <= n; i++)
-        {
-            fn += i;
-        }
-
-        printf("Sum = %d\n", fn);
-    }
-
-    else if(strcmp("PRODUCT", func) == 0)
-    {
-        fn = 1;
-        for (int i = 1; i <= n; i++)
-        {
-            fn *= i;
-        }
-
-        printf("Product = %d\n", fn);
-    }
-
+    sqart = sqrt(n);
+    printf("Square root = %f\n", sqart);  
     return(0);
 }
