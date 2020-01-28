@@ -5,11 +5,11 @@ int main()
     int n, fn = 0;
     char func[7];
 
-    printf("Enter a number : ");
+    printf("Enter n : ");
     scanf("%d", &n);
     printf("OUTPUT: Do you want the sum of first %d numbers or their product? ", n);
 
-    fgets(func, sizeof(func), stdin);
+    scanf(" %s", &func);
 
     if(strcmp("SUM", func) == 0)
     {
@@ -18,18 +18,18 @@ int main()
             fn += i;
         }
 
-        printf("Sum = %d", fn);
+        printf("Sum = %d\n", fn);
     }
 
     else if(strcmp("PRODUCT", func) == 0)
     {
         fn = 1;
-        for (int i = i; i <= n; i++)
+        for (int i = 1; i <= n; i++)
         {
             fn *= i;
         }
 
-        printf("Product = %d", fn);
+        printf("Product = %d\n", fn);
     }
 
     return(0);
