@@ -2,19 +2,17 @@
 int main()
 {
     int n1, n2;
-    
-    printf("Enter two numbers :\n");
 
-    scanf("%d%d", &n1, &n2);
+    scanf("%d, %d", &n1, &n2);
 
     if(n2 % n1 == 0)
     {
-        printf("YES\n");
+        printf("YES");
     }
 
     else
     {
-        printf("NO\n");
+        printf("NO");
     }
 
     return(0);
