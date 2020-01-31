@@ -4,10 +4,10 @@ int main()
 {
     
     int x,n,xpn;
-    printf("Enter x and n for x^n : ");
-    scanf("%d%d", &x, &n);
+
+    scanf("%d, %d", &x, &n);
     xpn = pow(x,n);
-    printf("%d^%d = %d\n", x, n, xpn);
+    printf("%d", xpn);
 
     return(0);
 }
