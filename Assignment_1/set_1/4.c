@@ -2,21 +2,20 @@
 int main()
 {
     int a,b,c;
+    
+    scanf("%d, %d, %d", &a, &b, &c);
 
-    printf("Please enter a,b,c in the respective order :\n");
-    scanf("%d%d%d", &a, &b, &c);
-
-    if( (a^2) == ((b^2) + (c^2)))
+    if( (a*a) == ((b*b) + (c*c)))
     {
         printf("%d, %d, %d\n", a, b, c);
     }
 
-    else if((b^2) == ((a^2) + (c^2)))
+    else if((b*b) == ((a*a) + (c*c)))
     {
         printf("%d, %d, %d\n", b, a, c);
     }
 
-    else if((c^2) == ((a^2) + (b^2)))
+    else if((c*c) == ((a*a) + (b*b)))
     {
         printf("%d, %d, %d\n", c, a, b);
     }
