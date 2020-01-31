@@ -5,9 +5,8 @@ int main()
     int n;
     float sqart;
 
-    printf("Enter a no : ");
     scanf("%d", &n);
     sqart = sqrt(n);
-    printf("Square root = %f\n", sqart);  
+    printf("%f", sqart);  
     return(0);
 }

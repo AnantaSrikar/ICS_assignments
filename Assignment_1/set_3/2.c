@@ -12,7 +12,12 @@ int main()
 
     if (f2(-2931) == 0)
     {
-        printf("YES\n");
+        printf("YES");
+    }
+
+    else 
+    {
+        printf("NO");
     }
     return(0);
 }
