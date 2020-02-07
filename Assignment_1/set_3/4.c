@@ -8,7 +8,7 @@ int main()
     quot = n1 / n2 ;
     rem = n1 % n2 ;
 
-    printf("%d, %d", quot, rem);
+    printf("%d,%d", quot, rem);
 
     return(0);
 }
