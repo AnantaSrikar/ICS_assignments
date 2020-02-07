@@ -13,6 +13,10 @@ int main()
     
     printf("Simple Interest for 10 years: %f\n", SI(p, r, t));
     printf("Compound Interest for 10 years annually: %f\n", CI(p, r, t, 1));
+    printf("Compound Interest for 10 years semi-annually: %f\n", CI(p, r, t, 2));
+    printf("Compound Interest for 10 years quarterly: %f\n", CI(p, r, t, 4));
+    printf("Compound Interest for 10 years monthly: %f\n", CI(p, r, t, 12));
+    printf("Compound Interest for 10 years daily: %f\n", CI(p, r, t, 365));
 
     return (0);
 }
