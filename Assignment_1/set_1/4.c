@@ -7,22 +7,22 @@ int main()
 
     if( (a*a) == ((b*b) + (c*c)))
     {
-        printf("%d, %d, %d\n", a, b, c);
+        printf("%d,%d,%d", a, b, c);
     }
 
     else if((b*b) == ((a*a) + (c*c)))
     {
-        printf("%d, %d, %d\n", b, a, c);
+        printf("%d,%d,%d", b, a, c);
     }
 
     else if((c*c) == ((a*a) + (b*b)))
     {
-        printf("%d, %d, %d\n", c, a, b);
+        printf("%d,%d,%d", c, a, b);
     }
 
     else
     {
-        printf("FAIL!\n");
+        printf("FAIL");
     }
     
     return(0);
