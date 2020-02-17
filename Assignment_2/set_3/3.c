@@ -8,10 +8,10 @@ int main()
 
     if(y1 > y2)
     {
+        y_diff = y1 - y2 - 1;
+
         if(m2 > m1)
         {
-            y_diff = y1 - y2 - 1;
-
             if(d2 > d1)
             {
                 m_diff = 11 - m2 + m1;
@@ -30,7 +30,19 @@ int main()
         else
         {
             y_diff = y1 - y2;
-            m_diff = m1 - m2;
+
+            if(d2 > d1)
+            {
+                m_diff = 11 - m1 + m2;
+                d_diff = 30 - d1 + d2;
+            }
+
+            else
+            {
+                m_diff = m1 - m2;
+                d_diff = d1 - d2;
+            }
+
         }
         
     }
