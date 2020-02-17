@@ -1,2 +1,2 @@
 # ICS_assignments
-All the solutions for this semester's ICS course assignments
+All the solutions for 2nd semester's ICS course assignments
