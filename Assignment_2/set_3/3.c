@@ -15,13 +15,13 @@ int main()
             if(d2 > d1)
             {
                 m_diff = 11 - m2 + m1;
-                d_diff = 29 - d1 + d2;
+                d_diff = 31 - d2 + d1;
             }
 
             else if (d2 <= d1)
             {
-                m_diff = 12 - m2 + m1;
-                d_diff = d1 - d2 - 1;
+                m_diff = 11 - m2 + m1;
+                d_diff = d1 - d2 + 1;
             }
         }
 
@@ -32,13 +32,13 @@ int main()
             if(d2 > d1)
             {
                 m_diff = 11 - m1 + m2;
-                d_diff = 30 - d1 + d2;
+                d_diff = 31 - d2 + d1;
             }
 
             else
             {
                 m_diff = m1 - m2;
-                d_diff = d1 - d2;
+                d_diff = d1 - d2 + 1;
             }
         }
     }
@@ -87,13 +87,13 @@ int main()
             if(d1 > d2)
             {
                 m_diff = 11 - m1 + m2;
-                d_diff = 29 - d2 + d1;
+                d_diff = 31 - d1 + d2;
             }
 
             else if (d1 <= d2)
             {
-                m_diff = 12 - m1 + m2;
-                d_diff = d2 - d1 - 1;
+                m_diff = 11 - m1 + m2;
+                d_diff = d2 - d1 + 1;
             }
 
         }
@@ -105,13 +105,13 @@ int main()
             if(d1 > d2)
             {
                 m_diff = 11 - m2 + m1;
-                d_diff = 30 - d2 + d1;
+                d_diff = 31 - d1 + d2;
             }
 
             else
             {
                 m_diff = m2 - m1;
-                d_diff = d2 - d1;
+                d_diff = d2 - d1 + 1;
             }
         }
     }
