@@ -9,38 +9,41 @@ int main()
     if(m > 12 || m < 1 || d > monthDays[m - 1] || d < 1)
         printf("INVALID");
 
-    if(y % 4 == 0)
+    else
     {
-        if(m == 1)
-            rem = 29 + 31 - d;
+        if(y % 4 == 0)
+        {
+            if(m == 1)
+                rem = 29 + 31 - d;
 
-        else if(m == 2)
-            rem = 29 - d;
+            else if(m == 2)
+                rem = 29 - d;
+
+            else
+            {
+                rem = (monthDays[m - 1] - d);
+
+                for (int i = m ; i < 12; i++)
+                    rem += monthDays[i];
+                
+                rem += 3 * 365 + 31 + 29;
+            }
+        }
 
         else
         {
-            rem = (monthDays[m - 1] - d);
+            int rem_years = 3 - (y % 4);
+
+            rem = monthDays[m - 1] - d;
 
             for (int i = m ; i < 12; i++)
                 rem += monthDays[i];
             
-            rem += 3 * 365 + 31 + 29;
-        }
+            rem += rem_years * 365 + 31 + 29;
+
+        }        
+        printf("%d", rem);
     }
 
-    else
-    {
-        int rem_years = 3 - (y % 4);
-
-        rem = monthDays[m - 1] - d;
-
-        for (int i = m ; i < 12; i++)
-            rem += monthDays[i];
-        
-        rem += rem_years * 365 + 31 + 29;
-    }
-
-    printf("%d", rem);
-    
     return(0);
 }
