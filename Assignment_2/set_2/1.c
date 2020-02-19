@@ -7,8 +7,13 @@ int main()
 
     nos[0] = 0;
     
-    while(nos[n] != -999)
-        scanf("%d ", &nos[n]);
+    while(scanf("%d", &nos[n]))
+        {
+            if (nos[n] != -999)
+                n++;
+            else
+                break;
+        }
     
     max = min = nos[0];
 
