@@ -8,7 +8,7 @@ int main()
 
     if((n >= 0) && (n <= 32))
     {
-        printf("Binary equivalent of decimal number 21 is ");
+        printf("Binary equivalent of decimal number %d is ", n);
         bin_rep(n);
     }
     
