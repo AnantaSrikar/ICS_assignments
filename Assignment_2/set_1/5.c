@@ -15,7 +15,6 @@ int main()
 
         for(int i = 0; i < 4; i++)
         {
-            printf("Loop : %d\n", i);
             if(n * 2 > 1)
             {
                 binRep[i] = 1;
@@ -25,21 +24,19 @@ int main()
             else if(n * 2 == 1)
             {
                 binRep[i] = 1;
-                break;
+                n = 0;
             }
 
             else
             {
                 binRep[i] = 0;
-                n = (n * 2) - 1;
+                n *= 2;                
             }
-
-            printf("n = %f\nbinRep[%d] = %d\n", n, i, binRep[i]);
         }
 
         printf("Binary equivalent of %f is 0.", num);
 
-        for (int i = 3; i <= 0; i--)
+        for (int i = 0; i < 4; i++)
             printf("%d", binRep[i]);
     }
 
