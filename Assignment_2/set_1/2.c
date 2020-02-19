@@ -14,7 +14,7 @@ int main()
             min = arr[i];
     }
 
-    printf("%f", (max - min));
+    printf("%0.4f", (max - min));
 
     return (0);
 }
