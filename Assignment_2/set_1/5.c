@@ -6,8 +6,8 @@ int main()
 
     scanf("%f", &n);
 
-    if(n < 0)
-        printf("Entered number is out of range");
+    if(n < 0 || n > 1)
+        printf("Entered number is not a +ve decimal fraction less than 1");
     
     else
     {
