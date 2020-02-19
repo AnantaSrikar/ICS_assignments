@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include<math.h>
 int main()
 {
     float num, n;
@@ -13,6 +12,7 @@ int main()
     else
     {
         num = n;
+
         for(int i = 0; i < 4; i++)
         {
             printf("Loop : %d\n", i);
@@ -41,7 +41,6 @@ int main()
 
         for (int i = 3; i <= 0; i--)
             printf("%d", binRep[i]);
-
     }
 
     return(0);
