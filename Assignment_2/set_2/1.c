@@ -5,13 +5,10 @@ int main()
     int n = 0, max = 0, min = 0, n_odd = 0;
     float avg = 0;
 
-    while(scanf("%d", &nos[n]))
-    {
-        if (nos[n] != -999)
-            n++;
-        else
-            break;        
-    }
+    nos[0] = 0;
+    
+    while(nos[n] != -999)
+        scanf("%d ", &nos[n]);
     
     max = min = nos[0];
 
