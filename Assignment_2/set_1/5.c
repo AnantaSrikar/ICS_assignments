@@ -7,35 +7,42 @@ int main()
 
     scanf("%f", &n);
 
-    num = n;
-    for(int i = 0; i < 4; i++)
+    if(n < 0)
+        printf("Entered number is out of range");
+    
+    else
     {
-        printf("Loop : %d\n", i);
-        if(n * 2 > 1)
+        num = n;
+        for(int i = 0; i < 4; i++)
         {
-            binRep[i] = 1;
-            n = (n * 2) - 1;
+            printf("Loop : %d\n", i);
+            if(n * 2 > 1)
+            {
+                binRep[i] = 1;
+                n = (n * 2) - 1;
+            }
+
+            else if(n * 2 == 1)
+            {
+                binRep[i] = 1;
+                break;
+            }
+
+            else
+            {
+                binRep[i] = 0;
+                n = (n * 2) - 1;
+            }
+
+            printf("n = %f\nbinRep[%d] = %d\n", n, i, binRep[i]);
         }
 
-        else if(n * 2 == 1)
-        {
-            binRep[i] = 1;
-            break;
-        }
+        printf("Binary equivalent of %f is 0.", num);
 
-        else
-        {
-            binRep[i] = 0;
-            n = (n * 2) - 1;
-        }
+        for (int i = 3; i <= 0; i--)
+            printf("%d", binRep[i]);
 
-        printf("n = %f\nbinRep[%d] = %d\n", n, i, binRep[i]);
     }
-
-    printf("Binary equivalent of %f is 0.", num);
-
-    for (int i = 3; i <= 0; i--)
-        printf("%d", binRep[i]);
 
     return(0);
 }
