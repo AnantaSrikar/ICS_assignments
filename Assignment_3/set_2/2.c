@@ -9,12 +9,10 @@ int main()
     float precSet(float);
     
     scanf("%d", &n);
-    
-    x = n/2;
 
-    if(x != babAlgo(x, n))
+    if(n > 0)
     {
-        x = babAlgo(x, n);
+        x = n/2;
 
         if(x != babAlgo(x, n))
         {
@@ -23,21 +21,29 @@ int main()
             if(x != babAlgo(x, n))
             {
                 x = babAlgo(x, n);
-                    
+
                 if(x != babAlgo(x, n))
                 {
                     x = babAlgo(x, n);
-
+                        
                     if(x != babAlgo(x, n))
                     {
                         x = babAlgo(x, n);
+
+                        if(x != babAlgo(x, n))
+                        {
+                            x = babAlgo(x, n);
+                        }
                     }
                 }
             }
         }
+        
+        printf("%0.4f %0.4f", x, (sqrt(n) - x));
     }
 
-    printf("%0.4f %0.4f", x, (sqrt(n) - x));
+    else
+        printf("NO REAL SOLUTION");
 
     return (0);
 }
