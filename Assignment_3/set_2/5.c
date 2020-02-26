@@ -3,9 +3,29 @@ int main()
 {
     int n, sum = 0;
 
+    int retSum(int);
+
     scanf("%d", &n);
 
-    if(n / 10 >= 0 && n % 10 >= 0 && n / 10 <= 9999)
+    if (retSum(n) > 10)
+        if(retSum(retSum(n)) > 10)
+            if(retSum(retSum(retSum(n))) > 10)
+                printf("%d", retSum(retSum(retSum(n))));
+            else 
+                printf("%d",retSum(retSum(n)));
+        else
+            printf("%d", retSum(retSum(n)));
+    else
+        printf("%d", retSum(n));
+
+    return(0);
+}
+
+int retSum(int n)
+{
+    int sum = 0;
+
+    if(n / 10 >= 0 && n % 10 >= 0 && n / 10 <= 99999)
     {
         sum += n % 10;
         n /= 10;
@@ -26,16 +46,18 @@ int main()
                     n /= 10;
 
                     if(n / 10 >= 0 && n % 10 >= 0)
+                    {
                         sum += n % 10;
+                        n /= 10;
+
+                        if(n / 10 >= 0 && n % 10 >= 0)
+                            sum += n % 10 ;
+                    }
+
                 }
             }   
         }
 
-        printf("%d", sum);
-    }
-
-    else
-        printf("Digits more than 5 so can't calculate");    
-
-    return(0);
+        return sum;
+    }    
 }
