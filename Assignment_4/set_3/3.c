@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int n;
+    int n, num_time = 0;
     int isPrime(int);
 
     scanf("%d", &n);
@@ -12,8 +12,10 @@ int main()
     else
         for (int i = 2; (1 << i) - 1 <= n; i++)
             if(isPrime((1 << i) - 1))
-                printf("%d ", (1 << i) - 1);
-    
+                if(!num_time++)
+                    printf("%d", (1 << i) - 1);
+                else
+                    printf(", %d", (1 << i) - 1);
     return(0);
 }
 
