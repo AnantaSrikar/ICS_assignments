@@ -122,7 +122,7 @@ void PrintMenu(char* str)
 
 /*
 	Special shoutout to Fix capitalization. Spent a loot of time on it. Wasted 30 mins by
-	writing '=' instead of '=='. Note to self : always check you if statements.
+	writing '=' instead of '=='. Note to self : always check your if statements.
 	Cool advanced assignment problem anyways, I'm sure I could use this code elsewhere in
 	the future.
 */
