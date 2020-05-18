@@ -3,13 +3,13 @@
 void SortArray(int sortingList[], int numVals)
 {
 	for(int i = 0; i < numVals; i++) 
-			for(int j = i + 1; j < numVals; j++)
-				if (sortingList[i] > sortingList[j]) 
-				{
-					int temp = sortingList[i];
-					sortingList[i] = sortingList[j];
-					sortingList[j] = temp;
-				}
+		for(int j = i + 1; j < numVals; j++)
+			if (sortingList[i] > sortingList[j]) 
+			{
+				int temp = sortingList[i];
+				sortingList[i] = sortingList[j];
+				sortingList[j] = temp;
+			}
 	
 	for(int i = 0; i < numVals; i++)
 		printf("%d ", sortingList[i]);
